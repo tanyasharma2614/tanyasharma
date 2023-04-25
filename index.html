@@ -651,13 +651,21 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 								  </div>
 								</div>
 								<ul class="actions">
-								  <li><a href="mailto:tanyasharma99.work@gmail.com?
-									subject=Form Submission&
-									body=Name:%20%0DEmail:%20%0DMessage:%20%0A">
-									<input type="button" value="Send Message" class="button primary" /></a>
+								  <li>
+									<input type="submit" value="Send Message" class="button primary"
+									  onclick="location.href = 'mailto:tanyasharma99.work@gmail.com?subject=' +
+									  encodeURIComponent('Form Submission') +
+									  '&body=' +
+									  encodeURIComponent('Name: ' + document.getElementById('name').value) +
+									  '%0D%0A' +
+									  encodeURIComponent('Email: ' + document.getElementById('email').value) +
+									  '%0D%0A' +
+									  encodeURIComponent('Message: ' + document.getElementById('message').value);"
+									/>
 								  </li>
 								</ul>
 							  </form>
+							  
 						</div>
 						<footer>
 							<ul class="items">
